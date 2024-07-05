@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - cd reactapp
+      - pwd
+      - echo Installing NPM dependencies...
+      - npm install
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - pwd
+      - ls
+      - npm run build
+      - echo Build completed
+      - pwd
+      - ls
+      - ls build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: reactapp/build
+  discard-paths: no  # Maintains directory structure
