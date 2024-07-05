@@ -1,0 +1,188 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ECF0F1;
+  color: #34495E;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 97vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2C3E50;
+  padding: 15px;
+  color: #ECF0F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .brand-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #ECF0F1;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links li {
+  display: inline;
+}
+
+.navbar .nav-links a {
+  text-decoration: solid;
+  color: blue;
+  /* transition: color 0.3s ease; */
+}
+
+.navbar .nav-links a:hover {
+  color: #18BC9C;
+}
+
+/* Footer */
+.footer {
+  background-color: #2C3E50;
+  color: #ECF0F1;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Homepage */
+.homepage {
+  text-align: center;
+  padding: 140px 20px;
+  flex-grow: 1;
+}
+
+.homepage h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  color: #2C3E50;
+}
+
+.homepage p {
+  font-size: 1.2em;
+  color: #34495E;
+}
+
+/* Messages */
+.success-message {
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #E74C3C;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #18BC9C;
+  color: #ECF0F1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #16A085;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #BDC3C7;
+  border-radius: 5px;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Product List */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: #ECF0F1;
+  border: 1px solid #BDC3C7;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  color: #2C3E50;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #34495E;
+}
+
+.product-card button {
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .navbar-content {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .product-list {
+      grid-template-columns: 1fr;
+  }
+}
